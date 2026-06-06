@@ -1,0 +1,12 @@
+com/sientenium/api/service/UserService.class
+com/sientenium/api/entity/User.class
+com/sientenium/api/dto/AuthResponse.class
+com/sientenium/api/entity/Role.class
+com/sientenium/api/dto/LoginRequest.class
+com/sientenium/api/controller/DashboardController.class
+com/sientenium/api/repository/UserRepository.class
+com/sientenium/api/SpringSecurityApiApplication.class
+com/sientenium/api/config/SecurityConfig.class
+com/sientenium/api/dto/RegisterRequest.class
+com/sientenium/api/controller/AuthController.class
+com/sientenium/api/service/CustomUserDetailsService.class
