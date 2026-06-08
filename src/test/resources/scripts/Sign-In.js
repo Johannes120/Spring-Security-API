@@ -96,9 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Safety check
     if (!signinForm) {
 
-        console.error(
-            "Sign-in form not found."
-        );
+       showAlert(
+                    "Cannot find form.",
+                    "error"
+                );
 
         return;
     }
