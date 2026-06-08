@@ -5,6 +5,7 @@
 /workspaces/Spring-Security-API/src/main/java/com/sientenium/api/dto/AuthResponse.java
 /workspaces/Spring-Security-API/src/main/java/com/sientenium/api/dto/LoginRequest.java
 /workspaces/Spring-Security-API/src/main/java/com/sientenium/api/dto/RegisterRequest.java
+/workspaces/Spring-Security-API/src/main/java/com/sientenium/api/dto/UserSummaryResponse.java
 /workspaces/Spring-Security-API/src/main/java/com/sientenium/api/entity/Role.java
 /workspaces/Spring-Security-API/src/main/java/com/sientenium/api/entity/User.java
 /workspaces/Spring-Security-API/src/main/java/com/sientenium/api/repository/UserRepository.java

@@ -3,8 +3,10 @@ package com.sientenium.api.service;
 import com.sientenium.api.dto.AuthResponse;
 import com.sientenium.api.dto.LoginRequest;
 import com.sientenium.api.dto.RegisterRequest;
+import com.sientenium.api.dto.UserSummaryResponse;
 import com.sientenium.api.entity.Role;
 import com.sientenium.api.entity.User;
+import java.util.List;
 import com.sientenium.api.repository.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -43,6 +45,17 @@ public class UserService {
         userRepository.save(user);
 
         return new AuthResponse("User registered successfully", user.getEmail(), user.getRole().name());
+    }
+
+    public List<UserSummaryResponse> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(user -> new UserSummaryResponse(
+                        user.getId(),
+                        user.getFullName(),
+                        user.getEmail(),
+                        user.getDepartment(),
+                        user.getRole().name()))
+                .toList();
     }
 
     public AuthResponse login(LoginRequest request) {

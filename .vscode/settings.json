@@ -1,7 +1,11 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.updateBuildConfiguration": "automatic",
     "chat.tools.terminal.autoApprove": {
-        "mvn -q clean": true
+        "mvn -q clean": true,
+        "/^cd /workspaces/Spring-Security-API && python3 - <<'PY'\nimport json, urllib\\.request\nbase='http://localhost:18080'\naccounts=\\[\n  \\{'fullName':'Demo User 1','email':'demo1@example\\.com','password':'Secret123!','department':'Admin Department'\\},\n  \\{'fullName':'Demo User 2','email':'demo2@example\\.com','password':'Secret123!','department':'Manager Department'\\},\n  \\{'fullName':'Demo User 3','email':'demo3@example\\.com','password':'Secret123!','department':'Staff Department'\\},\n\\]\nfor a in accounts:\n    req=urllib\\.request\\.Request\\(base\\+'/api/auth/register', data=json\\.dumps\\(a\\)\\.encode\\(\\), headers=\\{'Content-Type':'application/json'\\}, method='POST'\\)\n    with urllib\\.request\\.urlopen\\(req\\) as r:\n        print\\('POST register ->', r\\.status, r\\.read\\(\\)\\.decode\\(\\)\\)\nreq=urllib\\.request\\.Request\\(base\\+'/api/auth/users', method='GET'\\)\nwith urllib\\.request\\.urlopen\\(req\\) as r:\n    print\\('GET users ->', r\\.status\\)\n    print\\(r\\.read\\(\\)\\.decode\\(\\)\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     }
 }

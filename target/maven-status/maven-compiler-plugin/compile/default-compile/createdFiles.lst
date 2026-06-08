@@ -1,4 +1,5 @@
 com/sientenium/api/service/UserService.class
+com/sientenium/api/dto/UserSummaryResponse.class
 com/sientenium/api/entity/User.class
 com/sientenium/api/dto/AuthResponse.class
 com/sientenium/api/entity/Role.class
